@@ -62,6 +62,11 @@ open class AmazonS3RequestSerializer {
      The AWS STS session token. `nil` by default.
      */
     open var sessionToken: String?
+
+    /**
+     The amount of TimeInterval added to Date() for Date Header. `0` by default.
+     */
+    open var adjustInterval: TimeInterval?
     
     // MARK: - Initialization
     
@@ -239,7 +244,7 @@ open class AmazonS3RequestSerializer {
     }
     
     fileprivate func currentTimeStamp() -> String {
-        return requestDateFormatter.string(from: Date())
+        return requestDateFormatter.string(from: Date().addingTimeInterval(adjustInterval ?? 0))
     }
     
     fileprivate lazy var requestDateFormatter: DateFormatter = {
