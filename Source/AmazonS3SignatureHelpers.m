@@ -32,8 +32,9 @@
 @implementation AmazonS3SignatureHelpers
 
 + (NSString *)AWSSignatureForRequest:(NSURLRequest *)request
-                             timeStamp:(NSString *)timestamp
-                                secret:(NSString *)key
+                              bucket:(NSString *)bucket
+                           timeStamp:(NSString *)timestamp
+                              secret:(NSString *)key
 {
   NSMutableDictionary *mutableAMZHeaderFields = [NSMutableDictionary dictionary];
   [[request allHTTPHeaderFields] enumerateKeysAndObjectsUsingBlock:^(NSString *field, id value, __unused BOOL *stop) {
@@ -52,7 +53,7 @@
     [mutableCanonicalizedAMZHeaderString appendFormat:@"%@:%@\n", field, value];
   }  
   
-  NSString *canonicalizedResource = [AmazonS3SignatureHelpers canonicalizedResourceFromURL:request.URL];
+  NSString *canonicalizedResource = bucket ? [NSString stringWithFormat:@"/%@%@", bucket, request.URL.path] : request.URL.path;
   NSString *method = [request HTTPMethod];
   NSString *contentMD5 = [request valueForHTTPHeaderField:@"Content-MD5"];
   NSString *contentType = [request valueForHTTPHeaderField:@"Content-Type"];
@@ -67,11 +68,6 @@
   
   NSData *data = [self HMACSHA1EncodedDataFromString:mutableString withKey:key];
   return [self Base64EncodedStringFromData:data];
-}
-
-+ (NSString *)canonicalizedResourceFromURL:(NSURL *)url
-{
-    return [url.path stringByAddingPercentEncodingWithAllowedCharacters: [NSCharacterSet URLQueryAllowedCharacterSet]];
 }
 
 + (NSData *)HMACSHA1EncodedDataFromString:(NSString *)string withKey:(NSString *)key

@@ -31,8 +31,9 @@
 
 
 + (NSString * _Nonnull)AWSSignatureForRequest:(NSURLRequest * _Nonnull)request
-                           timeStamp:(NSString * _Nonnull)timestamp
-                              secret:(NSString * _Nonnull)key;
+                                       bucket:(NSString * _Nullable)bucket
+                                    timeStamp:(NSString * _Nonnull)timestamp
+                                       secret:(NSString * _Nonnull)key;
 
 + (NSString * _Nonnull)canonicalizedResourceFromURL:(NSURL * _Nonnull)url;
 

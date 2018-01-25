@@ -209,7 +209,9 @@ open class AmazonS3RequestSerializer {
         
         let timestamp = currentTimeStamp()
         
-        let signature = AmazonS3SignatureHelpers.awsSignature(for: request,
+        let signature = AmazonS3SignatureHelpers.awsSignature(
+            for: request,
+            bucket: bucket,
             timeStamp: timestamp,
             secret: secret)
         
