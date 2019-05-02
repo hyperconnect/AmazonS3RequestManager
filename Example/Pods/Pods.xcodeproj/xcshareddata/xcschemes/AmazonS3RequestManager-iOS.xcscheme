@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "2EE038F5397038B4351149E90BDCCDF5"
+               BlueprintIdentifier = "DCA3D4BAA958B9A110193590B843D8DA"
                BuildableName = "AmazonS3RequestManager.framework"
                BlueprintName = "AmazonS3RequestManager-iOS"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -26,7 +26,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
@@ -37,7 +36,6 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      language = ""
       launchStyle = "0"
       useCustomWorkingDirectory = "NO"
       ignoresPersistentStateOnLaunch = "NO"
@@ -47,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "2EE038F5397038B4351149E90BDCCDF5"
+            BlueprintIdentifier = "DCA3D4BAA958B9A110193590B843D8DA"
             BuildableName = "AmazonS3RequestManager.framework"
             BlueprintName = "AmazonS3RequestManager-iOS"
             ReferencedContainer = "container:Pods.xcodeproj">

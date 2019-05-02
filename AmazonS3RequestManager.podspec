@@ -7,6 +7,7 @@ s.homepage = 'https://github.com/AnthonyMDev/AmazonS3RequestManager'
 s.social_media_url = 'http://twitter.com/AnthonyMDev'
 s.authors = { 'Anthony Miller' => 'AnthonyMDev@gmail.com' }
 s.source = { :git => 'https://github.com/AnthonyMDev/AmazonS3RequestManager.git', :tag => s.version }
+s.swift_version = '5.0'
 
 s.ios.frameworks = 'MobileCoreServices'
 s.tvos.frameworks = 'MobileCoreServices'
@@ -20,6 +21,6 @@ s.source_files = 'Source/*.{h,m,swift}'
 
 s.requires_arc = true
 
-s.dependency 'Alamofire', '~> 4.1'
-s.dependency 'SWXMLHash', '~> 4.1.0'
+s.dependency 'Alamofire', '~> 4.8.2'
+s.dependency 'SWXMLHash', '~> 4.9.0'
 end

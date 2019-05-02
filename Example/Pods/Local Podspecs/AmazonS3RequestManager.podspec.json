@@ -12,6 +12,7 @@
     "git": "https://github.com/AnthonyMDev/AmazonS3RequestManager.git",
     "tag": "1.2.0"
   },
+  "swift_version": "5.0",
   "ios": {
     "frameworks": "MobileCoreServices"
   },
@@ -30,10 +31,10 @@
   "requires_arc": true,
   "dependencies": {
     "Alamofire": [
-      "~> 4.1"
+      "~> 4.8.2"
     ],
     "SWXMLHash": [
-      "~> 4.1.0"
+      "~> 4.9.0"
     ]
   }
 }
